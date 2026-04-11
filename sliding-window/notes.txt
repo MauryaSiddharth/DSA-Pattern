@@ -1,0 +1,20 @@
+maxwindow = constraint<=k
+minwindow = constraint>=k
+
+min window me shrink karne se pehle answer mein include karte hai
+ code  for min window
+for(int high=0;high<nums.length;high++){
+    sum+=nums[high];
+    while(information sahi){
+        int len =high-len+1;
+        ans = Math.min(ans,len);
+
+        sum-=nums[low];
+        low++;
+    }
+
+     information galat hai kucj karne ka jarurat nahi hai
+}
+return result;
+
+maxwindow mai while(ke andar information galt tha isme ulta hai)
