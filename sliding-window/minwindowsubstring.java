@@ -1,4 +1,8 @@
 // https://leetcode.com/problems/minimum-window-substring/description/ 
+
+//  this is giving TLE
+
+//    AFTER SOME TIME MAKE IT USING HASHMAP  
 public class minwindowsubstring {
     public static void main(String[] args) {
         String s = "ADOBECODEBANC";
@@ -8,14 +12,15 @@ public class minwindowsubstring {
     }
 
     static String minWindow(String s , String t){
-        int[] mapS= new int[256];    // 256 because ascii character
-        int [] mapT = new int[256];
+        int[] mapS= new int[256];   
+        int [] mapT = new int[256];    // both will used to store frequency count
 
         for(char ch : t.toCharArray()) mapT[ch]++;  // isme t ko character array me toda and mapt[ch]++ frequency count badha rha hai
-            //   or  we can do this 
+            
+        //   or  we can do this 
         //           for(int i = 0; i < t.length(); i++) {
-//     mapT[t.charAt(i)]++;
-// }
+//                 mapT[t.charAt(i)]++;
+//                  }
         int low =0;
         int minLen = Integer.MAX_VALUE;
         int  minStart=0;

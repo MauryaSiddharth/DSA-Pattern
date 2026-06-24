@@ -18,3 +18,5 @@ for(int high=0;high<nums.length;high++){
 return result;
 
 maxwindow mai while(ke andar information galt tha isme ulta hai)
+
+ascii code 128 [contain lowercase+ upper case+ some symbool]
