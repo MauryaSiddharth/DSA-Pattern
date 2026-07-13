@@ -25,7 +25,6 @@ public class longestpalindrome {
             length+=count-1;
             hasOdd=true;
         }
-
        }
        if(hasOdd){
         length++;
@@ -34,6 +33,5 @@ public class longestpalindrome {
      return length;
 
    
-    }
-    
+    }  
 }
