@@ -52,3 +52,58 @@ public class allocateminimumpages {
         return true;
     }
 }
+// public class practice {
+//     public static void main(String[] args) {
+//         int [] arr = {12,34,67,90};
+//         int k = 2;
+//         System.out.println(page(arr, k));
+//     }
+//     static int page (int [] arr ,int k){
+//         int n = arr.length-1;
+//         int res =-1;
+//         int low = arr[0];
+//         for(int i = 0; i < arr.length;i++){
+//             if(arr[i]>low){
+//                 low=arr[i];
+//             }
+//         }
+
+//         int high =0;
+//         for(int i =0 ; i < arr.length;i++){
+//             high+=arr[i];
+//         }
+
+//         while(low<=high){
+//            int mid = low +(high-low)/2;
+            
+//             if(fun(arr, k, mid)){
+//                 res = mid;
+//                 high =mid-1;
+//             }
+//             else{
+//                 low = mid+1;
+//             }
+//         }
+//         return res;
+//     }
+
+//     static boolean fun(int [] arr , int k , int mid){
+//         int child =1;
+//         int pages=0;
+
+//         for(int i = 0 ; i < arr.length;i++){
+//             if(pages+arr[i]<=mid){
+//                 pages=pages+arr[i];
+//             }
+//             else{
+//                 child++;
+//                 pages=arr[i];
+
+//                 if(child>k){
+//                     return false;
+//                 }
+//             }
+//         }
+//         return true;
+//     }
+// }
