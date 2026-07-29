@@ -9,51 +9,79 @@ public class binarysearch2d {
         System.out.println(searchMatrix(matrix, target));
     }
 
-    static boolean searchMatrix(int [][] matrix , int target){
+
+    static boolean searchMatrix(int [] [] matrix ,int target){
+        int n = matrix.length;
+        int m  = matrix[0].length;
         int low = 0;
-        int high = matrix.length-1;
-        int row = 0;
-        int res =-1;
+        int high = n*m-1;
 
         while(low<=high){
             int mid = (low+high)/2;
-             if(matrix[mid][0]<=target){
-                row = mid;
-                low= mid+1;
-             }
-             else{
-                high=mid-1;
-             }
 
-        }
+            int row  = mid/ m;
+            int col = mid%m;
 
-        int low2= 0;
-        int high2=matrix[row].length-1;
-
-        while(low2<=high2){
-            int mid = (low2+high2)/2;
-
-            if(matrix[row][mid]==target){
+            if(matrix[row][col]==target){
                 return true;
             }
 
-            if(matrix[row][mid]<=target){
-                res=mid;
-                low2=mid+1;
+            else if( matrix[row][col]<= target){
+                low = mid+1;
             }
+
             else{
-                high2 = mid-1;
+                high=mid-1;
             }
         }
-
-        if(res==-1){
-            return false;
-        }
-
-        return true;
-
-
+        return false;
     }
+
+    // static boolean searchMatrix(int [][] matrix , int target){
+    //     int low = 0;
+    //     int high = matrix.length-1;
+    //     int row = 0;
+    //     int res =-1;
+
+    //     while(low<=high){
+    //         int mid = (low+high)/2;
+    //          if(matrix[mid][0]<=target){
+    //             row = mid;
+    //             low= mid+1;
+    //          }
+    //          else{
+    //             high=mid-1;
+    //          }
+
+    //     }
+
+    //     int low2= 0;
+    //     int high2=matrix[row].length-1;
+
+    //     while(low2<=high2){
+    //         int mid = (low2+high2)/2;
+
+    //         if(matrix[row][mid]==target){
+    //             return true;
+    //         }
+
+    //         if(matrix[row][mid]<=target){
+    //             res=mid;
+    //             low2=mid+1;
+    //         }
+    //         else{
+    //             high2 = mid-1;
+    //         }
+    //     }
+
+    //     if(res==-1){
+    //         return false;
+    //     }
+
+    //     return true;
+
+
+    // }
      
     // static boolean searchMatrix(int [][] matrix ,int target){
     //     for(int i = 0;i <matrix.length;i++){
@@ -64,7 +92,7 @@ public class binarysearch2d {
     //         }
     //     }
     //     return false;
-    
+
     // }
     
 }
