@@ -45,29 +45,26 @@ public class topkfrequentword {
 );
 
  for (Map.Entry<String, Integer> entry : freqMap.entrySet()) {
-      String element = entry.getKey();
-            int frequency = entry.getValue();
+    Pair curr = new Pair(entry.getValue(), entry.getKey());
 
-            Pair curr = new Pair(frequency,element);
+    if (pq.size() < k) {
+        pq.offer(curr);
+    } else {
+        Pair top = pq.peek();
 
-           if(pq.size()<k){
-                 pq.add(curr);
-           }
+        if (curr.first > top.first ||
+            (curr.first == top.first &&
+             curr.second.compareTo(top.second) < 0)) {
 
-           if(curr.first>pq.peek().first){
             pq.poll();
-            pq.add(curr);
-           }
- }
-
+            pq.offer(curr);
+        }
+    }
+}
   List<String> res = new java.util.ArrayList<>();
-   int idx = k-1;
-
  while(!pq.isEmpty()){
     res.add(0, pq.poll().second);
  }
-  
-
         return res;
     }
 }
