@@ -45,7 +45,7 @@ public class topkfrequent {
             Pair curr = new Pair(frequency, element);
 
             if (pq.size() < k) {
-                pq.offer(curr);
+                pq.add(curr);
             } else if (curr.first > pq.peek().first) {
                 pq.poll();
                 pq.offer(curr);
@@ -62,3 +62,6 @@ public class topkfrequent {
         return res;
     }
 }
+
+// complexity : nlogk
+//  in heap item stored in formatof [ freq, chaarcter]
