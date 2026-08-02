@@ -53,7 +53,10 @@ public class heappair {
             System.out.println(minmax.poll());
         }
 
+
         //  same for max heap max heap and max heap min heap (condition changes )
+   
+   
     }
 }
 
