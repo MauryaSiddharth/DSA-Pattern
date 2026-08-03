@@ -36,3 +36,6 @@ public class courseschedule3 {
         
     }
 }
+
+
+// TC :  O(nlogn)
