@@ -63,7 +63,7 @@ public class topkfrequentword {
 }
   List<String> res = new java.util.ArrayList<>();
  while(!pq.isEmpty()){
-    res.add(0, pq.poll().second);
+    res.add(0, pq.poll().second);   // heap se nikalo and 0 index pe daldo
  }
         return res;
     }
