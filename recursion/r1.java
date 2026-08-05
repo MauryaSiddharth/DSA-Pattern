@@ -3,7 +3,11 @@ public class r1{
         // System.out.println(sum(687));
         int [] arr = {7,4,9,10,11,5,6};
         int idx = 0;
-        System.out.println(check(arr, idx));
+        // System.out.println(check(arr, idx));
+        String s = "apple";
+        char ch = 'p';
+        int index = 0;
+        System.out.println(remove(s, ch, index));
 
     }
     static int sum(int n){ // sum of number
@@ -32,7 +36,23 @@ public class r1{
       return  check(arr, idx+1);
     }
 
-//     remove all occurence of string  21
+//     remove all occurence of string  
+
+  static String remove(String s, char ch , int index) {
+    
+    if(index == s.length()){
+        return "";
+    }
+
+   char current = s.charAt(index);
+
+   if(current==ch){
+    return remove(s, ch, index+1);
+   }
+
+   return current+remove(s, ch, index+1);
+
+  }
 
 
 
