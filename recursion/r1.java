@@ -4,7 +4,6 @@ public class r1{
         int [] arr = {7,4,9,10,11,5,6};
         int idx = 0;
         System.out.println(check(arr, idx));
-// https://www.youtube.com/watch?v=T88t25Lv82c 
 
     }
     static int sum(int n){ // sum of number
