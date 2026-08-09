@@ -27,22 +27,18 @@ public class combinationsum {
             return;
         }
         if (idx == candidates.length || sum > target) {
-    return;
-}
-
-        
+           return;
+        }       
            current.add(candidates[idx]);
           fun(candidates, target, sum + candidates[idx], idx, result, current);
          current.remove(current.size() - 1);
 
-         
-
-       
+          
          fun(candidates, target, sum, idx+1, result, current);
          
 
          return;
     }
-
+//  leet difffernt style
     
 }
