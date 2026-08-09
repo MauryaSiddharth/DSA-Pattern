@@ -1,5 +1,6 @@
 public class inordertraversal {
-
+    //     check leetcode 
+    //  similar traversal for postorder and preorder 
     // TreeNode class
     static class TreeNode {
         int val;
