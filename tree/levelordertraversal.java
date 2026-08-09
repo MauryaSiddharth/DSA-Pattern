@@ -3,7 +3,10 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+import javax.swing.tree.TreeNode;
+
 public class levelordertraversal {
+    // Complexity: O(n) time and O(n) space.
     static class TreeNode {
       int val;
       TreeNode left;
@@ -21,7 +24,7 @@ public class levelordertraversal {
         root.left = new TreeNode(9);
         root.right= new TreeNode(20);
         root.right.left= new TreeNode(15);
-        root.right.left= new TreeNode(7);
+        root.right.right= new TreeNode(7);
 
         System.out.println(levelOrder(root));
         
@@ -48,7 +51,7 @@ public class levelordertraversal {
                         q.add(node.left);
                     }
 
-                    if(node.right!=null){
+                    if(node.right!=null){  // if you have to print right to left move it above left
                         q.offer(node.right);
                     }
 
