@@ -52,7 +52,7 @@ public class lca {
 
         int total = self + left + right;
 
-        if (total == 2 && temp == null) { // 2 because we have given 2 node p and q 
+        if (total == 2 && temp == null) { // 2 because we have given 2 node p and q  & null because i want first node 
             temp = root;
         }
 
