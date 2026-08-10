@@ -37,9 +37,7 @@ public class invertbinarytree {
        invertTree(root.right);
 
        return root;
-     
- 
-        
+
     }
 
 
