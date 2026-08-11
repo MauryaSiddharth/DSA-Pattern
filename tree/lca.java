@@ -29,7 +29,7 @@ public class lca {
         // These must be the actual nodes from the tree
         TreeNode p = root.left;        // 5
         TreeNode q = root.right;       // 1
-
+            //  temp = null // reset temp for every call  this for leetcode 
         fun(root, p, q);
 
         System.out.println(temp.val);
