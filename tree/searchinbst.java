@@ -1,5 +1,5 @@
 public class searchinbst {
-
+//     check leetcode
     static class TreeNode {
         int val;
         TreeNode left;
