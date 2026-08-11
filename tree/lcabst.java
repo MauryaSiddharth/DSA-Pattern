@@ -33,7 +33,16 @@ public class lcabst{
         TreeNode p  =    root.left.left.right ;
         TreeNode q = root.left.right.left;
         
-        fun(root, p, q);
+    //           Edge case 
+        // if(p.val<q.val){
+        //     fun(root,p,q);
+        // }
+        // else{
+        //     fun(root,q,p);
+        // }
+
+
+        fun(root, p, q);   //  but here and leetcode  generaly p < q 
         System.out.println(temp.val);
         
     }
