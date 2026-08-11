@@ -52,6 +52,7 @@ public class lcabst{
         }
         if(root == p || root ==q ){
             temp = root;
+            return ;
         }
         if(root.val<p.val && root.val<q.val){
             fun(root.right,p,q);
@@ -63,6 +64,7 @@ public class lcabst{
 
      else{    //(root.val>p.val && root.val<q.val) this case
        temp =root;
+     
      }
 
     }
