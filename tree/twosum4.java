@@ -59,5 +59,6 @@ public class twosum4{
     fun(root.right);
   }
    
+//    There is a second approach also using stack and two pointer  refer that also
    
 }
