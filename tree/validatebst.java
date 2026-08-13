@@ -50,7 +50,7 @@ public class validatebst {
       return true;
 
     }
-    
+
     //  optimized way
      static TreeNode prev  = null;
     static    boolean ans = true;
@@ -66,12 +66,14 @@ public class validatebst {
          else{
             if(root.val<=prev.val){
                 ans = false;
-                prev=root;
+               
             }
+             prev=root;
          }
          validate(root.right);
       
     }
+    
 
 
 }
