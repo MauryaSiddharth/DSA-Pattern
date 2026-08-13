@@ -52,7 +52,7 @@ public class pathsum2 {
         fun(root.right, targetSum, list2, sum, list);
 
     
-        list2.remove(list2.size() - 1);
+        list2.remove(list2.size() - 1); //Remove the last node you added to the current path.
     }
     
 }
