@@ -32,6 +32,7 @@ public class validatebst {
         list.add(root.val);
         fun(root.right);
     }
+    //  brute approach
     static boolean validatebst(TreeNode root){
  
         for(int i = 0; i < list.size()-1;i++){
