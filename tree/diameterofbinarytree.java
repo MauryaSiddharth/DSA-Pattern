@@ -13,9 +13,13 @@ public class diameterofbinarytree{
         res=0;
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
+        root.left.left= new TreeNode(5);
         root.right = new TreeNode(3);
+        root.right.right = new TreeNode(60);
+        root.right.right.right = new TreeNode(69);
         fun(root);
         System.out.println(res);
+        System.out.println(fun(root));
       
         
      }
@@ -28,6 +32,6 @@ public class diameterofbinarytree{
         int sum = left+right;
             res= Math.max(res, sum);
 
-        return 1+Math.max(left,right); // 
+        return 1+Math.max(left,right); // ?
      }
 }
