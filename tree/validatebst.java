@@ -20,10 +20,16 @@ public class validatebst {
     root.left.right = new TreeNode(4);
     root.right= new TreeNode(6);
     root.right.right = new TreeNode(7);   
-          fun(root);
-    System.out.println(validatebst(root));
+    // brute approach
+    //       fun(root);
+    // System.out.println(validatebst(root));
+      
+    System.out.println("optimizeed");
+         validate(root);
+         System.out.println(ans);
 
     }
+
     static void fun(TreeNode root){
         if(root == null){
             return ;
@@ -32,7 +38,7 @@ public class validatebst {
         list.add(root.val);
         fun(root.right);
     }
-    //  brute approach
+    //  brute approach -> inorder traversal then check it is sorted or not
     static boolean validatebst(TreeNode root){
  
         for(int i = 0; i < list.size()-1;i++){
@@ -44,4 +50,28 @@ public class validatebst {
       return true;
 
     }
+    
+    //  optimized way
+     static TreeNode prev  = null;
+    static    boolean ans = true;
+    static void validate(TreeNode root){
+        if(root == null){
+            return ;
+        }
+        validate(root.left);
+         if(prev==null){
+            prev=root;
+
+         }
+         else{
+            if(root.val<=prev.val){
+                ans = false;
+                prev=root;
+            }
+         }
+         validate(root.right);
+      
+    }
+
+
 }
