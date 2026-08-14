@@ -24,6 +24,8 @@ public class constructtree{
     static HashMap<Integer,Integer> map = new HashMap<>();
 
     static TreeNode buildTree(int[] preorder, int[] inorder) {
+         idx = 0;
+    map.clear();
         for(int i = 0; i <inorder.length;i++){
             map.put(inorder[i],i);
         }
