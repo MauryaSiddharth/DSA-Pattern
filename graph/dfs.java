@@ -56,3 +56,46 @@ System.out.println(dfss(adj));
         }
     }
 }
+
+// 
+// import java.util.*;
+
+// public class Main {
+
+//     static void dfs(int node, boolean[] visited, List<List<Integer>> graph) {
+
+//         // Mark current node as visited
+//         visited[node] = true;
+
+//         // Print it
+//         System.out.print(node + " ");
+
+//         // Visit all its neighbors
+//         for (int neighbor : graph.get(node)) {
+//             if (!visited[neighbor]) {
+//                 dfs(neighbor, visited, graph);
+//             }
+//         }
+//     }
+
+//     public static void main(String[] args) {
+
+//         int n = 5;
+
+//         List<List<Integer>> graph = new ArrayList<>();
+
+//         for (int i = 0; i < n; i++) {
+//             graph.add(new ArrayList<>());
+//         }
+
+//         // Edges
+//         graph.get(0).add(1);
+//         graph.get(0).add(2);
+//         graph.get(1).add(3);
+//         graph.get(1).add(4);
+
+//         boolean[] visited = new boolean[n];
+
+//         dfs(0, visited, graph);
+//     }
+// }
