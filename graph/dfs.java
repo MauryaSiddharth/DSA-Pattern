@@ -31,16 +31,12 @@ System.out.println(dfss(adj));
                 Collections.nCopies(n, false)
         );
 
-        dfs(adj, 0, res, visited);
+        dfsss(adj, 0, res, visited);
 
         return res;
     }
 
-    static void dfs(
-            ArrayList<ArrayList<Integer>> adj,
-            int node,
-            ArrayList<Integer> res,
-            ArrayList<Boolean> visited) {
+    static void dfsss(  ArrayList<ArrayList<Integer>> adj, int node,ArrayList<Integer> res,ArrayList<Boolean> visited) {
 
         res.add(node);
         visited.set(node, true);
@@ -51,7 +47,7 @@ System.out.println(dfss(adj));
             int neighbour = adj.get(node).get(i);
 
             if (!visited.get(neighbour)) {
-                dfs(adj, neighbour, res, visited);
+                dfsss(adj, neighbour, res, visited);
             }
         }
     }
