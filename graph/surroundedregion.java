@@ -45,7 +45,7 @@ public class surroundedregion {
             if(board[i][j]=='#'){
                 board[i][j]='O';
             }
-            else{
+             else{
                 board[i][j]='X';
             }
 
