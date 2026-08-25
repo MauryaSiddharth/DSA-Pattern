@@ -45,7 +45,6 @@ dijkastraalgo obj = new dijkastraalgo();
             a.get(s).add(new Pair(d,w));
             a.get(d).add(new Pair(s,w));
         }
-        //    by default priority queue is min heap 
 PriorityQueue<Pair> minHeap = new PriorityQueue<>((x, y) -> x.val1 - y.val1);
      ArrayList<Integer> distance = new ArrayList<>();
            distance.add(0);
@@ -55,7 +54,7 @@ PriorityQueue<Pair> minHeap = new PriorityQueue<>((x, y) -> x.val1 - y.val1);
 
          distance.set(src, 0);
          minHeap.add(new Pair(0,src));
-        //   we storing in distance(wt)+node
+        //   we storing in distance(wt)+node  in min heap
 
          while(!minHeap.isEmpty()){
             Pair p = minHeap.poll();
