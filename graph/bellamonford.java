@@ -25,7 +25,7 @@ public class bellamonford {
         }
 
         for(int i = 0; i < V; i++){
-            res.add((int) 1e9);
+            res.add((int) 1e8);
         }
 
         res.set(src, 0);
@@ -37,8 +37,7 @@ public class bellamonford {
                 int d = edges[j][1];
                 int wt = edges[j][2];
 
-                if(res.get(s) != (int)(1e9) &&
-                   res.get(d) > res.get(s) + wt){
+                if(res.get(s) != (int)(1e8) && res.get(d) > res.get(s) + wt){
 
                     res.set(d, res.get(s) + wt);
                 }
@@ -51,7 +50,7 @@ public class bellamonford {
             int d = edges[j][1];
             int wt = edges[j][2];
 
-            if(res.get(s) != (int)(1e9) &&
+            if(res.get(s) != (int)(1e8) &&
                res.get(d) > res.get(s) + wt){
 
                 return res2;
