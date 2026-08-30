@@ -1,6 +1,7 @@
 import java.util.LinkedList;
 import java.util.Queue;
-
+// time = O(n × m × log H)
+// Space: O(n*m);
 public class swiminrisingwater {
 
     static class Pair {
