@@ -5,7 +5,8 @@ public class subsetsum {
         int[] arr = {3, 34, 4, 12, 5, 2};
         int sum = 9;
 
-        System.out.println(isSubsetSum(arr, sum));
+        // System.out.println(isSubsetSum(arr, sum));
+        System.out.println(isSubsetSumtab(arr,sum));
     }
 
     static boolean isSubsetSum(int[] arr, int sum) {
@@ -78,5 +79,48 @@ public class subsetsum {
 
         return result;
     }
-    
+
+
+                    //  tabulation way
+    static boolean isSubsetSumtab(int[] arr, int sum) {
+    int n = arr.length;
+
+    ArrayList<ArrayList<Integer>> dp = new ArrayList<>(n + 1);
+
+    // Create (n+1) x (sum+1) DP table
+    for (int i = 0; i <= n; i++) {
+        ArrayList<Integer> t = new ArrayList<>(sum + 1);
+
+        for (int j = 0; j <= sum; j++) {
+            t.add(0);
+        }
+
+        dp.add(t);
+    }
+
+    // Base case:
+    // sum = 0 is always possible
+    for (int i = 0; i <= n; i++) {
+        dp.get(i).set(0, 1);
+    }
+
+    // Fill table bottom-up
+    for (int i = n - 1; i >= 0; i--) {
+        for (int k = 1; k <= sum; k++) {
+
+            if (arr[i] > k) {
+                // Cannot include arr[i]
+                dp.get(i).set(k, dp.get(i + 1).get(k));
+            } else {
+                // Include OR don't include arr[i]
+                int include = dp.get(i + 1).get(k - arr[i]);
+                int exclude = dp.get(i + 1).get(k);
+
+                dp.get(i).set(k, include == 1 || exclude == 1 ? 1 : 0);
+            }
+        }
+    }
+
+    return dp.get(0).get(sum) == 1;
+}
 }
