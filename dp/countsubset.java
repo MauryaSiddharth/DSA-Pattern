@@ -77,8 +77,5 @@ public class countsubset {
 
         // tabulation way 
 
-        static int fun3(int[] arr, int target){
-            int n =arr.length;
-
-        }
+       
 }

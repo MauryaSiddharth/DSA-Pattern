@@ -36,7 +36,7 @@ public class partitionequalsum{
         return c1||c2;
     }
 
-    
+
                             //   dp memoization way 
     // dp[i][s1]
     // -1 = not calculated
@@ -89,4 +89,6 @@ public class partitionequalsum{
         return ans;
 
     }
+
+              //  tabulation
  }
