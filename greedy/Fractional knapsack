@@ -1,0 +1,40 @@
+class Solution {
+    public double fractionalKnapsack(int[] val, int[] wt, int capacity) {
+
+        int n = val.length;
+
+        // Store value/weight ratio with index
+        Integer[] idx = new Integer[n];
+
+        for (int i = 0; i < n; i++) {
+            idx[i] = i;
+        }
+
+        Arrays.sort(idx, (a, b) -> 
+            Double.compare(
+                (double) val[b] / wt[b],
+                (double) val[a] / wt[a]
+            )
+        );
+
+        double sum2 = 0;
+
+        for (int i : idx) {
+
+            // Complete item can be taken
+            if (wt[i] <= capacity) {
+                capacity -= wt[i];
+                sum2 += val[i];
+            }
+
+            // Take fraction of item
+            else {
+                double rem = ((double) capacity * val[i]) / wt[i];
+                sum2 += rem;
+                break;
+            }
+        }
+
+        return sum2;
+    }
+}
